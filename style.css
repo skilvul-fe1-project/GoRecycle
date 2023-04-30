@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+header img{
+    height: 60px;
+    
+    
+}
+
+nav{
+    align-items: center;
+    display: flex;
+    
+}
+
+nav ul{
+    display: flex;
+    
+}
+
+nav ul li{
+    padding: 0 20px;
+    list-style: none;
+}
+
+nav ul li a{
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+}
+nav label{
+    margin: 0 20px;
+}
+.toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.toggle-slot {
+    
+    font-size: 10px;
+    position: relative;
+    height: 3.5em;
+    width: 7em;
+    border: 0px solid transparent;
+    border-radius: 10em;
+    background-color: rgb(215, 216, 215);
+    transition: background-color 250ms;
+}
+
+.toggle-checkbox:checked~.toggle-slot {
+    background-color: #374151;
+}
+
+.toggle-button {
+    transform: translate(0.3em, 0.25em);
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    background-color: #ffeccf;
+    box-shadow: inset 0px 0px 0px 0.75em #ffbb52;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+}
+
+.toggle-checkbox:checked~.toggle-slot .toggle-button {
+    background-color: #485367;
+    box-shadow: inset 0px 0px 0px 0.75em white;
+    transform: translate(3.65em, 0.25em);
+}
+
+.sun-icon {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    color: #ffbb52;
+}
+
+.sun-icon-wrapper {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    opacity: 1;
+    transform: translate(2em, 2em) rotate(15deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+}
+
+.toggle-checkbox:checked~.toggle-slot .sun-icon-wrapper {
+    opacity: 0;
+    transform: translate(3em, 2em) rotate(0deg);
+}
+
+.moon-icon {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    color: white;
+}
+
+.moon-icon-wrapper {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    opacity: 0;
+    transform: translate(11em, 2em) rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2.5, .46, .71);
+}
+
+.toggle-checkbox:checked~.toggle-slot .moon-icon-wrapper {
+    opacity: 1;
+    transform: translate(2em, 2em) rotate(-15deg);
+}
+
+footer {
+    border-top: 3px solid #c8f088;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-footer {
+    background-color: white;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navbar {
+
+    width: 450px;
+    display: flex;
+    height: 70px;
+    font-size: 12pt;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a {
+    letter-spacing: 0.5px;
+    color: #080808 ;
+    transition: all 0.3s;
+}
+
+
+.navbar a:hover{
+    color: #7BAB2F;
+    transform: scale(1.1)
+}
+
+
+.media {
+    width: 150px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.media a {
+    font-size: 15pt;
+    color: rgba(0, 0, 0, 0.39);
+    transition: all 0.3s;
+}
+
+#footer-img {
+    position: relative;
+    top: 56px;
+    right: 39px;
+    height: 350px;
+}
+
+.skilvul {
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0.568);
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+.skilvul a{
+    transition: all 0.3s;
+}
+.skilvul a:hover{
+    transform: scale(1.2);
+}
+
+.copyrights{
+    background-color: white;
+    display: flex;
+justify-content: center;
+padding: 20px;
+letter-spacing: 0.5px;
+font-weight: 500;
+color: #5c5959;
+font-size: 10pt;
+
+}
+
+.media a:hover{
+    color: #7BAB2F;
+    transform: scale(1.2);
+
+}
