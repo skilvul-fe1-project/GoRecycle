@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<div class="container">
     <header>
         <img src="https://i.ibb.co/Rvg0Z66/image-17.png" alt="image-17" class="logo">
         <nav id="toggleContent">
@@ -20,20 +21,34 @@
                 <li><a href="">Artikel</a></li>
                 <li><a href="">Donasi</a></li>
                 <li><a href="">Kontak</a></li>
-             
+                <li><div class="toggle-switch">
+                    <input class="toggle-input" id="toggle" type="checkbox">
+                    <label class="toggle-label" for="toggle"></label>
+                  </div>
+                  </li>
             </ul>
         </nav>
         <div class="bars">
             <i class='bx bx-menu bx-flip-horizontal'></i>
         </div>
     </header>
+</div>
     <section>
-        
+        <form action="">
+            <div class="description">
+                <h1>Kontak</h1>
+                <p>Anda dapat menghubungi kami melalui form yang tersedia di website kami.</p>
+            </div>
+            <input type="text" placeholder="Nama" required>
+            <input type="email" placeholder="Email" required>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Komentar anda"></textarea>
+            <button type="submit">Kirim</button>
+
+        </form>
     </section>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br>
     <div class="footer-img">
-        <img src="https://gorecycle.netlify.app/gambar/3ds.png" alt="3ds-removebg-preview"
-        id="footer-img">
+        <img src="https://gorecycle.netlify.app/gambar/3ds.png" alt="3ds-removebg-preview" id="footer-img">
     </div>
     <footer>
         <div class="container-footer">
@@ -66,4 +81,5 @@
     </footer>
 </body>
 <script src="main.js"></script>
+
 </html>
