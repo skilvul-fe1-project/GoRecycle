@@ -124,7 +124,10 @@ form .description p {
     text-align: center;
     margin: 1rem;
 }
-
+form input{
+    display: block;
+ 
+}
 form input,
 button,
 textarea {
@@ -543,7 +546,7 @@ footer {
     .navbar {
         position: fixed;
         bottom: -22rem;
-        left: -100%;
+        left: -110%;
         width: 100%;
         background-color: #eaeceb;
         transition:0.3s ;
