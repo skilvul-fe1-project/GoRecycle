@@ -1,5 +1,5 @@
 async function getData() {
-    let url = 'https://644e67144e86e9a4d8f7c68e.mockapi.io/artikel'
+    let url = 'https://6450a341e1f6f1bb229b7974.mockapi.io/api/v1/articles'
     try {
         let res = await fetch(url)
         return await res.json();
@@ -12,7 +12,7 @@ async function renderData() {
     let data = await getData()
     let html = ''
     data.forEach(content => {
-        let htmlSegment = `<a href="">
+        let htmlSegment = `<a href="/deskripsi-artikel/berita.html?id=${content.id}">
         <div class="card-box">
             <img src = "${content.image}"></img>
             <h2>${content.title}</h2>

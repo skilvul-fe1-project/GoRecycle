@@ -21,8 +21,18 @@ hamburger.addEventListener("click", () => {
 
 
 
-async function getArticles() {
-    let url = 'https://6450a341e1f6f1bb229b7974.mockapi.io/api/v1/articles';
+async function getArticles(id) {
+    let url = `https://6450a341e1f6f1bb229b7974.mockapi.io/api/v1/articles/${id}`;
+    try {
+        let res = await fetch(url);
+        return await res.json();
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+async function getRelatedArticles() {
+    let url = `https://6450a341e1f6f1bb229b7974.mockapi.io/api/v1/articles`;
     try {
         let res = await fetch(url);
         return await res.json();
@@ -32,40 +42,46 @@ async function getArticles() {
 }
 
 async function renderArticles() {
-    let articles = await getArticles();
+    const urlParams = new URLSearchParams(window.location.search);
+    const articleId = urlParams.get('id');
+    let articles = await getArticles(articleId);
+    let relatedArticle = await getRelatedArticles();
     let html = '';
-    let listcard ='';
-    
-    console.log(articles[0]);
+    let listcard = '';
 
-    articles.forEach((article,index) => {
-        
-        if (index == 0){
-            let htmlSegment = `
+    console.log(articles);
+    console.log(articles.description);
+
+    let htmlSegment = `
             <section>
-            <b>${article.title}</b>
-            <img src="${article.image}" alt="1648201764673-1" border="0" id="hero-img">
+            <b>${articles.title}</b>
+            <img src="${articles.image}" alt="1648201764673-1" border="0" id="hero-img">
             </section>
-            <p>${article.date}</p><br>
-            <p>${article.description}</p><br></div>
+            <p>${articles.date}</p><br>
+            <p>${articles.description}</p><br></div>
             `;
-            html += htmlSegment;
+    html += htmlSegment;
 
-        } else {
-            let htmlCard = `<a href="">
+    relatedArticle.forEach((article, index) => {
+
+        if (!(articleId == article.id) && index <= 2) {
+            let htmlCard = `<a href="/deskripsi-artikel/berita.html?id=${article.id}">
             <div class="card-box">
                 <img src="${article.image}" alt="Capture-1" border="0">
                 ${article.date}
                 <h2>${article.title}</h2>
-            </div></a>`;  
-            listcard +=htmlCard;
-        } 
+            </div></a>`;
+            listcard += htmlCard;
+        }
+        
 
-    });
+
+
+    })
 
     let container = document.querySelector('main');
     container.innerHTML = html;
-    
+
     let containerCard = document.querySelector('.row-card');
     containerCard.innerHTML = listcard;
 }
