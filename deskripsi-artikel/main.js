@@ -62,9 +62,10 @@ async function renderArticles() {
             `;
     html += htmlSegment;
 
+    let i = 0
     relatedArticle.forEach((article, index) => {
 
-        if (!(articleId == article.id) && index <= 2) {
+        if (!(articleId == article.id) && i <= 2) {
             let htmlCard = `<a href="/deskripsi-artikel/berita.html?id=${article.id}">
             <div class="card-box">
                 <img src="${article.image}" alt="Capture-1" border="0">
@@ -72,6 +73,7 @@ async function renderArticles() {
                 <h2>${article.title}</h2>
             </div></a>`;
             listcard += htmlCard;
+            i++
         }
         
 
