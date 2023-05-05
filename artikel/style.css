@@ -39,7 +39,6 @@ header {
     padding: 1rem 2rem;
     z-index: 1000;
     transition: all 0.3s;
-
     border-bottom: 4px solid rgb(221, 221, 221);
 }
 
@@ -47,7 +46,6 @@ header.sticky {
     transition: all 0.3s;
     border-bottom: 4px solid #c8f088;
 }
-
 
 nav ul {
     display: flex;
@@ -70,8 +68,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #4CAF50;
-    border-bottom: 1px solid ;
+    color:#4CAF50;
 }
 
 .hamburger {
@@ -79,8 +76,7 @@ nav ul li a:hover {
     display: none;
     font-size: 20pt;
 }
-
-.bar {
+.bar{
     display: block;
     width: 25px;
     height: 3px;
@@ -89,237 +85,89 @@ nav ul li a:hover {
     background-color: black;
 }
 
-
-section {
-
-    justify-content: center;
-    align-items: center;
+.blog-hero {
+    background-image: url(https://images.unsplash.com/photo-1632853782096-bdd975c3b199?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1048&q=80);
+    height: 500px;
     display: flex;
-    padding: 370px 0;
-    height: 60vh;
-    background-color: rgb(255, 255, 255);
-
-}
-
-form {
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.200);
-    background-color: #F8F8F8;
-    padding: 50px;
-    width: 1300px;
-    margin: 50px 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-
-form .description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 15pt;
-}
-
-form .description p {
-    width: 60%;
+    padding: 200px;
     text-align: center;
-    margin: 1rem;
-}
-
-form input {
-    display: block;
-
-}
-
-form input,
-button,
-textarea {
-    resize: none;
-    width: 50vw;
-    margin: 1rem 0;
-    border: 1px solid rgba(0, 0, 0, 0.200);
-}
-
-input,
-button,
-textarea {
-    border: 1px solid rgba(0, 0, 0, 0.200);
-    border-radius: 5px;
-    padding: 10px;
-}
-
-input:hover,
-input:focus {
-    outline: none;
-    border-color: #7BAB2F;
-}
-
-textarea:hover,
-textarea:focus {
-    outline: none;
-    border-color: #7BAB2F;
-}
-
-form button {
-    background-color: #7BAB2F;
-    color: white;
-    transition: all 0.3s;
-}
-
-form button:hover {
-    background-color: white;
-    color: #4CAF50;
-}
-
-
-/*** dark mode */
-.cont {
-    height: 20px;
-    width: 50px;
-    background: #202430;
-    border-radius: 80px;
-    overflow: hidden;
-    cursor: pointer;
-
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-}
-
-input {
-    display: none;
-}
-
-#btn:checked~.cont {
-    background: whitesmoke;
-    box-shadow: 0 0 0 1200px #d8dce9;
-}
-
-.cont:before {
-    content: "";
-    margin: 0 5px;
-    height: 15px;
-    width: 15px;
-    background: whitesmoke;
-    border-radius: 80px;
-    transition: 0.5s;
-}
-
-#btn:checked~.cont:before {
-    transform: translateX(112%);
-    background: #202430;
-}
-
-
-/********/
-
-
-
-.container_donasi {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.donasi {
-    width: 1200px;
-    justify-content: space-between;
-    background-size: cover;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-
-}
-
-.donasi img {
-
-    height: 80%;
-    mix-blend-mode: color-burn;
-}
-
-.sub-judul {
-    width: 450px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 100px;
-}
-
-.sub-judul h4 {
-    color: #4CAF50;
-    font-size: 2rem;
-}
-
-.sub-judul h1 {
-    font-size: 3rem;
-    margin: 10px 0;
-}
-
-.sub-judul p {
-    font-weight: 600;
+    font-size: 48px;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.card-box img {
-
-    height: 200px;
+.container-blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.card-box a {
-    background-color: #7BAB2F;
-    color: white;
-    padding: 10px;
+.blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.blog-title {
     display: flex;
     justify-content: center;
-    font-weight: 500;
-    transition: all 0.3s;
-    border: 1px solid;
+    font-size: 32px;
+    color: #034130;
+    margin: 50px 0;
 }
 
-.card-box a:hover {
-    background-color: white;
-    color: #7BAB2F;
-    border: 1px solid #7BAB2F;
+
+.content-blog {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.row-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    margin: 15px;
 }
 
 .card-box {
-    gap: 10px;
-    height: 350px;
+    border:1px solid #c8f088;
+    box-shadow: 0px 1px 20px 1px rgb(0,0,0,0.2);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    width: 300px;
-    border: 1px solid #c8f088;
-    border-radius: 10px;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 25px;
+    align-items: center;
+    width: 350px;
+    color: black;
+    height: 350px;
     transition: all 0.3s;
-    box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.2);
 }
 
 .card-box:hover {
     transform: translateY(-5px);
-
+    background-color: #4CAF50;
+    color: white;
 }
 
+.card-box img {
+    height: 200px;
+    width: auto;
 
-.cards {
-    margin: 100px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
 }
 
 footer {
@@ -378,8 +226,10 @@ footer {
 #footer-img {
     position: relative;
     top: 56px;
-    right: 39px;
+    right: 100px;
     height: 350px;
+    display: flex;
+    justify-content: center;
 }
 
 .skilvul {
@@ -431,32 +281,10 @@ footer {
     justify-content: center;
 }
 
-@media (max-width:976px) {
-    body {
-        padding-top: 150px;
-
+@media (max-width:1500px) {
+    .card-box {
+        width: 350px;
     }
-
-    .donasi {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .sub-judul {
-
-        justify-content: center;
-        text-align: center;
-        display: flex;
-    }
-
-    .sub-judul p {}
-
-    .donasi .sub-judul {
-        width: 80%;
-        right: 50px;
-        position: relative;
-    }
-
 }
 
 @media (max-width:787px) {
@@ -490,40 +318,12 @@ footer {
 }
 
 @media (max-width:575px) {
-    .donasi {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .sub-judul {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .donasi .sub-judul {
-        width: 80%;
-        right: 50px;
-        position: relative;
-    }
 
     .description p,
     h2 {
         font-size: 10pt;
         width: 200px;
     }
-
-    form .description p {
-        width: 90%;
-        text-align: center;
-        margin: 1rem;
-    }
-
-    form {
-        margin-top: 200px;
-        margin-bottom: 300px;
-    }
-
-
 
     footer {
         align-items: center;
@@ -535,42 +335,51 @@ footer {
 
     }
 
+    nav {
+        position: fixed;
+        top: -100 rem;
+        left: 0;
+        width: 100%;
+        background-color: #4CAF50;
+        opacity: 0;
+
+    }
+
     .hamburger {
         display: block;
 
     }
-
-    .hamburger.active .bar:nth-child(2) {
+    .hamburger.active .bar:nth-child(2){
         opacity: 0;
     }
-
-    .hamburger.active .bar:nth-child(1) {
+    .hamburger.active .bar:nth-child(1){
         transform: translateY(8px) rotate(45deg);
     }
-
-    .hamburger.active .bar:nth-child(3) {
+    .hamburger.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
 
     .navbar {
+        display: block;
         position: fixed;
         bottom: -22rem;
         left: -110%;
         width: 100%;
         background-color: #eaeceb;
-        transition: 0.3s;
-        border-bottom: 3px solid #7BAB2F;
+        transition:0.3s ;
+        border-bottom: 3px solid #7BAB2F ;
+        opacity: 1;
     }
 
-    .navbar.active {
-        left: 0;
-        border-bottom: 3px solid #7BAB2F;
+    .navbar.active{
+        left:0;
+        border-bottom: 3px solid #7BAB2F ;
     }
 
     nav ul {
         flex-flow: column;
         padding: 1rem 0;
-
+        
     }
 
     nav ul li {
@@ -583,13 +392,13 @@ footer {
         font-size: 2rem;
 
     }
-
     nav ul li a:hover {
         color: #4CAF50;
 
     }
 
-    .navbar-footer {
+
+    .navbar-footer{
         flex-direction: column;
         width: 30%;
         margin: 5rem;

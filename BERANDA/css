@@ -1,0 +1,56 @@
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+  outline: black;
+  background-image: none;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.5 0l-3 3h2v2h-2l3 3 1.5-1.5-2.5-2.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 3-3h-2v-2h2l-3-3z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.carousel-control-prev:focus, .carousel-control-next:focus {
+  outline: black;
+}
+@media (max-width: 768px) {
+  .carousel-item {
+    height: auto;
+  }
+
+  .carousel-item img {
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-control-prev, .carousel-control-next {
+    width: 10%;
+  }
+}
