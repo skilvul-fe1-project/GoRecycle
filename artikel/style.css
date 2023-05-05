@@ -8,7 +8,7 @@
 }
 
 body {
-    padding-top: 100px;
+    padding-top: 120px;
 
 }
 
@@ -39,8 +39,7 @@ header {
     padding: 1rem 2rem;
     z-index: 1000;
     transition: all 0.3s;
-    transition: all 0.3s;
-    border-bottom: 1px solid rgb(221, 221, 221);
+    border-bottom: 4px solid rgb(221, 221, 221);
 }
 
 header.sticky {
@@ -57,6 +56,8 @@ nav ul {
 
 nav ul li {
     margin: 0 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li a {
@@ -67,93 +68,21 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: blue;
+    color:#4CAF50;
 }
 
-
-/*** dark mode */
-
-.toggle-switch {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 24px;
-    margin: 10px;
-}
-
-
-.toggle-switch .toggle-input {
-    display: none;
-}
-
-
-.toggle-switch .toggle-label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 24px;
-    background-color: #4CAF50;
-    border-radius: 34px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-
-.toggle-switch .toggle-label::before {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    top: 2px;
-    left: 2px;
-    background-color: #fff;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-}
-
-
-.toggle-switch .toggle-input:checked+.toggle-label {
-    background-color: #e7d10b;
-}
-
-.toggle-switch .toggle-input:checked+.toggle-label::before {
-    transform: translateX(16px);
-}
-
-
-.toggle-switch.light .toggle-label {
-    background-color: #BEBEBE;
-}
-
-.toggle-switch.light .toggle-input:checked+.toggle-label {
-    background-color: #9B9B9B;
-}
-
-.toggle-switch.light .toggle-input:checked+.toggle-label::before {
-    transform: translateX(6px);
-}
-
-
-.toggle-switch.dark .toggle-label {
-    background-color: #4B4B4B;
-}
-
-.toggle-switch.dark .toggle-input:checked+.toggle-label {
-    background-color: #717171;
-}
-
-.toggle-switch.dark .toggle-input:checked+.toggle-label::before {
-    transform: translateX(16px);
-}
-
-/********/
-
-.bars {
+.hamburger {
     cursor: pointer;
     display: none;
     font-size: 20pt;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    background-color: black;
 }
 
 .blog-hero {
@@ -166,14 +95,18 @@ nav ul li a:hover {
     font-size: 48px;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container-blog {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-
 
 .blog {
     display: flex;
@@ -237,20 +170,6 @@ nav ul li a:hover {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer {
     border-top: 3px solid #c8f088;
     display: flex;
@@ -268,7 +187,7 @@ footer {
     flex-direction: column;
 }
 
-.navbar {
+.navbar-footer {
 
     width: 450px;
     display: flex;
@@ -278,7 +197,7 @@ footer {
     justify-content: center;
 }
 
-.navbar a {
+.navbar-footer a {
     letter-spacing: 0.5px;
     color: #080808;
     transition: all 0.3s;
@@ -286,7 +205,7 @@ footer {
 }
 
 
-.navbar a:hover {
+.navbar-footer a:hover {
     color: #7BAB2F;
     transform: scale(1.1)
 }
@@ -406,21 +325,6 @@ footer {
         width: 200px;
     }
 
-    form .description p {
-        width: 90%;
-        text-align: center;
-        margin: 1rem;
-    }
-
-    form {
-        margin-top: 200px;
-        margin-bottom: 300px;
-    }
-
-    .bars {
-        display: block;
-    }
-
     footer {
         align-items: center;
         padding: 50px;
@@ -441,24 +345,60 @@ footer {
 
     }
 
+    .hamburger {
+        display: block;
+
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar {
+        display: block;
+        position: fixed;
+        bottom: -22rem;
+        left: -110%;
+        width: 100%;
+        background-color: #eaeceb;
+        transition:0.3s ;
+        border-bottom: 3px solid #7BAB2F ;
+        opacity: 1;
+    }
+
+    .navbar.active{
+        left:0;
+        border-bottom: 3px solid #7BAB2F ;
+    }
+
     nav ul {
         flex-flow: column;
         padding: 1rem 0;
+        
     }
 
     nav ul li {
         margin: 1rem 0;
         width: 100%;
         text-align: center;
-
     }
 
     nav ul li a {
-        font-size: 5rem;
+        font-size: 2rem;
+
+    }
+    nav ul li a:hover {
+        color: #4CAF50;
 
     }
 
-    .navbar {
+
+    .navbar-footer{
         flex-direction: column;
         width: 30%;
         margin: 5rem;
