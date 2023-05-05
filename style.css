@@ -39,7 +39,7 @@ header {
     padding: 1rem 2rem;
     z-index: 1000;
     transition: all 0.3s;
-    
+
     border-bottom: 4px solid rgb(221, 221, 221);
 }
 
@@ -47,6 +47,7 @@ header.sticky {
     transition: all 0.3s;
     border-bottom: 4px solid #c8f088;
 }
+
 
 nav ul {
     display: flex;
@@ -69,7 +70,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color:#4CAF50;
+    color: #4CAF50;
+    border-bottom: 1px solid ;
 }
 
 .hamburger {
@@ -77,7 +79,8 @@ nav ul li a:hover {
     display: none;
     font-size: 20pt;
 }
-.bar{
+
+.bar {
     display: block;
     width: 25px;
     height: 3px;
@@ -124,10 +127,12 @@ form .description p {
     text-align: center;
     margin: 1rem;
 }
-form input{
+
+form input {
     display: block;
- 
+
 }
+
 form input,
 button,
 textarea {
@@ -162,48 +167,49 @@ form button {
     color: white;
     transition: all 0.3s;
 }
+
 form button:hover {
     background-color: white;
-    color:#4CAF50;
+    color: #4CAF50;
 }
 
 
 /*** dark mode */
 .cont {
-	height: 20px;
-	width: 50px;
-	background: #202430;
-	border-radius: 80px;
-	overflow: hidden;
-	cursor: pointer;
+    height: 20px;
+    width: 50px;
+    background: #202430;
+    border-radius: 80px;
+    overflow: hidden;
+    cursor: pointer;
 
-	transition: 0.3s;
-	display: flex;
-	align-items: center;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
 }
 
 input {
-	display: none;
+    display: none;
 }
 
-#btn:checked ~ .cont {
-	background: whitesmoke;
-	box-shadow: 0 0 0 1200px #d8dce9;
+#btn:checked~.cont {
+    background: whitesmoke;
+    box-shadow: 0 0 0 1200px #d8dce9;
 }
 
 .cont:before {
-	content: "";
-	margin: 0 5px;
-	height: 15px;
-	width: 15px;
-	background: whitesmoke;
-	border-radius: 80px;
-	transition: 0.5s;
+    content: "";
+    margin: 0 5px;
+    height: 15px;
+    width: 15px;
+    background: whitesmoke;
+    border-radius: 80px;
+    transition: 0.5s;
 }
 
-#btn:checked ~ .cont:before {
-	transform: translateX(112%);
-	background: #202430;
+#btn:checked~.cont:before {
+    transform: translateX(112%);
+    background: #202430;
 }
 
 
@@ -517,7 +523,7 @@ footer {
         margin-bottom: 300px;
     }
 
- 
+
 
     footer {
         align-items: center;
@@ -528,18 +534,21 @@ footer {
         position: relative;
 
     }
-    
+
     .hamburger {
         display: block;
 
     }
-    .hamburger.active .bar:nth-child(2){
+
+    .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
-    .hamburger.active .bar:nth-child(1){
+
+    .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
-    .hamburger.active .bar:nth-child(3){
+
+    .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 
@@ -549,19 +558,19 @@ footer {
         left: -110%;
         width: 100%;
         background-color: #eaeceb;
-        transition:0.3s ;
-        border-bottom: 3px solid #7BAB2F ;
+        transition: 0.3s;
+        border-bottom: 3px solid #7BAB2F;
     }
 
-    .navbar.active{
-        left:0;
-        border-bottom: 3px solid #7BAB2F ;
+    .navbar.active {
+        left: 0;
+        border-bottom: 3px solid #7BAB2F;
     }
 
     nav ul {
         flex-flow: column;
         padding: 1rem 0;
-        
+
     }
 
     nav ul li {
@@ -574,6 +583,7 @@ footer {
         font-size: 2rem;
 
     }
+
     nav ul li a:hover {
         color: #4CAF50;
 
